@@ -1,0 +1,30 @@
+<html>
+    <body>
+    <h1>
+    Fecha y hora actuales
+    </h1>
+
+    {% if nombre_persona == "Profesor Juan" %}
+        <p> el curso lo imparte el profe titular</p>
+    
+        {% else %}
+        <p>el curso lo parte el otro ql</p>
+    {% endif %}
+    <p>El nombre del profesor es: {{nombre_persona}} {{apellido_persona}}</p>
+    <p>la hora es: {{momento_actual.day}}</p>
+    <p><stong>Temas del curso</stong></p>
+    <p>
+        <ul>
+        {% if temas %}
+            {% for elTema in temas %}
+
+                <li>{{elTema}}</li>
+
+            {% endfor %}
+        {% else %}
+        <p>no hay elementos que mostrar</p>
+        {% endif %}
+        </ul>
+    </p>
+    </body>
+    </html>
